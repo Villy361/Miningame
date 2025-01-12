@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button onclick="RawCopperClicked()" id="rawCopperButton">Click this <span id="rawCopperRemainingClicks">5</span> more times to get <span id="rawCopperGained">1</span> Copper!</button>
-    <p id="rawCopperAmountText">You have <span id="rawCopperOwned">0</span> Raw Copper</p>
+    <h1 id="rawCopperAmountText">You have <span id="rawCopperOwned">0</span> Raw Copper</h1>
+    <button onclick="RawCopperClicked()" id="rawCopperButton">Click this <span id="rawCopperRemainingClicks">5</span> more times to get <span id="rawCopperGained">1</span> Raw Copper!</button>
+    <button onclick="UpgradeRawCopperGained()" id="rawCopperUpgrade1">Click this to upgrade your Raw Copper Gain! (Costs <span id="rawCopperGainUpgradeCost">2</span> Raw Copper) [Times bought: <span id="timesRawCopperGainUpgraded">0</span>]</button>
     <script src="script.js"></script>
 </body>
 </html>

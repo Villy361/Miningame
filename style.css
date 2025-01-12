@@ -2,13 +2,19 @@ body{
     background-color: #20ead6;
 }
 #rawCopperButton{
-    background-color: chocolate;
+    background-color: black;
     font-family: monospace;
+    color: orange;
+}
+#rawCopperUpgrade1{
+    background-color: black;
+    font-family: monospace;
+    color: orange;
 }
 #rawCopperAmountText{
     font-family: monospace;
     width: max-content;
-    background-color: white;
+    background-color: orange;
     border: 2px solid black;
-    color: chocolate;
+    color: black;
 }
