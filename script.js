@@ -2,7 +2,7 @@ rawCopper = 0
 rawCopperRequiredClicks = 5
 rawCopperRemainingClicks = 5
 
-function CopperClicked(){
+function RawCopperClicked(){
     rawCopperRemainingClicks--
     if (rawCopperRemainingClicks == 0){
         rawCopper++
