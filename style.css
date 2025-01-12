@@ -1,0 +1,12 @@
+body{
+    background-color: #20ead6;
+}
+#rawCopperButton{
+    background-color: chocolate;
+}
+#rawCopperAmountText{
+    width: max-content;
+    background-color: white;
+    border: 2px solid black;
+    color: chocolate;
+}
