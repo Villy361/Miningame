@@ -1,2 +1,2 @@
 # Miningame
-A "Mining" game. Shoutout to Demonin for helping me make this!
+A "Mining" game. Shoutout to Demonin for teaching me how to make this!
