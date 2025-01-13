@@ -18,3 +18,20 @@ body{
     border: 2px solid black;
     color: black;
 }
+#rawTinButton{
+    background-color: black;
+    font-family: monospace;
+    color: #c7e0f6;
+}
+#rawTinUpgrade1{
+    background-color: black;
+    font-family: monospace;
+    color: #c7e0f6;
+}
+#rawTinAmountText{
+    font-family: monospace;
+    width: max-content;
+    background-color: #c7e0f6;
+    border: 2px solid black;
+    color: black;
+}
