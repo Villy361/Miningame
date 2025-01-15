@@ -4,12 +4,22 @@ rawCopperRequiredClicks = 5
 rawCopperRemainingClicks = 5
 rawCopperGainedUpgradeCost = 2
 timesRawCopperGainUpgraded = 0
+rawCopperProduction = 0
+rawCopperProductionUpgradeCost = 2
+timesRawCopperProductionUpgraded = 0
 rawTin = 0
 rawTinGained = 1
 rawTinRequiredClicks = 10
 rawTinRemainingClicks = 10
 rawTinGainedUpgradeCost = 5
 timesRawTinGainUpgraded = 0
+const intervalID = setInterval(ProductionTick, 1000)
+
+function ProductionTick(){
+    isProductionSetup = true
+    rawCopper += rawCopperProduction
+    document.getElementById("rawCopperOwned").innerText = rawCopper
+}
 
 function RawCopperClicked(){
     rawCopperRemainingClicks--
@@ -31,6 +41,19 @@ function UpgradeRawCopperGained(){
         document.getElementById("rawCopperGained").innerText = rawCopperGained
         document.getElementById("rawCopperGainUpgradeCost").innerText = rawCopperGainedUpgradeCost
         document.getElementById("timesRawCopperGainUpgraded").innerText = timesRawCopperGainUpgraded
+    }
+}
+
+function UpgradeRawCopperProduction(){
+    if (rawCopper >= rawCopperProductionUpgradeCost){
+        rawCopper -= rawCopperProductionUpgradeCost
+        rawCopperProduction++
+        rawCopperProductionUpgradeCost += 2
+        timesRawCopperProductionUpgraded += 1
+        document.getElementById("rawCopperOwned").innerText = rawCopper
+        document.getElementById("rawCopperProduction").innerText = rawCopperProduction
+        document.getElementById("rawCopperProductionUpgradeCost").innerText = rawCopperProductionUpgradeCost
+        document.getElementById("timesRawCopperProductionUpgraded").innerText = timesRawCopperProductionUpgraded
     }
 }
 
