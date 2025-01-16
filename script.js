@@ -17,7 +17,7 @@ const intervalID = setInterval(ProductionTick, 1000)
 
 function ProductionTick(){
     isProductionSetup = true
-    rawCopper += rawCopperProduction
+    rawCopper += rawCopperProduction * rawCopperGained
     document.getElementById("rawCopperOwned").innerText = rawCopper
 }
 
@@ -35,7 +35,7 @@ function UpgradeRawCopperGained(){
     if (rawCopper >= rawCopperGainedUpgradeCost){
         rawCopper -= rawCopperGainedUpgradeCost
         rawCopperGained += 1
-        rawCopperGainedUpgradeCost += 2
+        rawCopperGainedUpgradeCost *= 2
         timesRawCopperGainUpgraded += 1
         document.getElementById("rawCopperOwned").innerText = rawCopper
         document.getElementById("rawCopperGained").innerText = rawCopperGained
@@ -48,7 +48,7 @@ function UpgradeRawCopperProduction(){
     if (rawCopper >= rawCopperProductionUpgradeCost){
         rawCopper -= rawCopperProductionUpgradeCost
         rawCopperProduction++
-        rawCopperProductionUpgradeCost += 2
+        rawCopperProductionUpgradeCost *= 2
         timesRawCopperProductionUpgraded += 1
         document.getElementById("rawCopperOwned").innerText = rawCopper
         document.getElementById("rawCopperProduction").innerText = rawCopperProduction
