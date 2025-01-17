@@ -34,11 +34,12 @@ function RawCopperClicked(){
 function UpgradeRawCopperGained(){
     if (rawCopper >= rawCopperGainedUpgradeCost){
         rawCopper -= rawCopperGainedUpgradeCost
-        rawCopperGained += 1
+        rawCopperGained *= 2
         rawCopperGainedUpgradeCost *= 2
-        timesRawCopperGainUpgraded += 1
+        timesRawCopperGainUpgraded++
         document.getElementById("rawCopperOwned").innerText = rawCopper
         document.getElementById("rawCopperGained").innerText = rawCopperGained
+        document.getElementById("rawCopperProduction").innerText = rawCopperProduction * rawCopperGained
         document.getElementById("rawCopperGainUpgradeCost").innerText = rawCopperGainedUpgradeCost
         document.getElementById("timesRawCopperGainUpgraded").innerText = timesRawCopperGainUpgraded
     }
@@ -47,13 +48,13 @@ function UpgradeRawCopperGained(){
 function UpgradeRawCopperProduction(){
     if (rawCopper >= rawCopperProductionUpgradeCost){
         rawCopper -= rawCopperProductionUpgradeCost
-        rawCopperProduction++
-        rawCopperProductionUpgradeCost *= 2
-        timesRawCopperProductionUpgraded += 1
+        rawCopperProduction = 2
+        rawCopperProductionUpgradeCost = -1
+        timesRawCopperProductionUpgraded++
         document.getElementById("rawCopperOwned").innerText = rawCopper
-        document.getElementById("rawCopperProduction").innerText = rawCopperProduction
+        document.getElementById("rawCopperProduction").innerText = rawCopperProduction * rawCopperGained
         document.getElementById("rawCopperProductionUpgradeCost").innerText = rawCopperProductionUpgradeCost
-        document.getElementById("timesRawCopperProductionUpgraded").innerText = timesRawCopperProductionUpgraded
+        document.getElementById("RawCopperProductionUpgraded").innerText = "Yes"
     }
 }
 
