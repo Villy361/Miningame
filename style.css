@@ -40,3 +40,15 @@ body{
     border: 2px solid black;
     color: black;
 }
+#moneyAmountText{
+    font-family: monospace;
+    width: max-content;
+    background-color: #0eee0a;
+    border: 2px solid black;
+    color: black;
+}
+#moneyButton{
+    background-color: black;
+    font-family: monospace;
+    color: #0eee0a;
+}

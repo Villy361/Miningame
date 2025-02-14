@@ -5,7 +5,7 @@ rawCopperRemainingClicks = 5
 rawCopperGainedUpgradeCost = 2
 timesRawCopperGainUpgraded = 0
 rawCopperProduction = 0
-rawCopperProductionUpgradeCost = 2
+rawCopperProductionUpgradeCost = -1
 timesRawCopperProductionUpgraded = 0
 rawTin = 0
 rawTinGained = 1
@@ -13,6 +13,9 @@ rawTinRequiredClicks = 10
 rawTinRemainingClicks = 10
 rawTinGainedUpgradeCost = 5
 timesRawTinGainUpgraded = 0
+money = 0
+moneyGainMult = 1
+moneyPerRawTin = 1
 const intervalID = setInterval(ProductionTick, 1000)
 
 function ProductionTick(){
@@ -64,6 +67,8 @@ function RawTinClicked(){
         rawTin += rawTinGained
         rawTinRemainingClicks = rawTinRequiredClicks
         document.getElementById("rawTinOwned").innerText = rawTin
+        document.getElementById("rawTinSellAmount").innerText = rawTin
+        document.getElementById("moneyGainedFromRawTin").innerText = rawTin * moneyGainMult * moneyPerRawTin
     }
     document.getElementById("rawTinRemainingClicks").innerText = rawTinRemainingClicks
 }
@@ -78,5 +83,16 @@ function UpgradeRawTinGained(){
         document.getElementById("rawTinGained").innerText = rawTinGained
         document.getElementById("rawTinGainUpgradeCost").innerText = rawTinGainedUpgradeCost
         document.getElementById("timesRawTinGainUpgraded").innerText = timesRawTinGainUpgraded
+    }
+}
+
+function MoneyClicked(){
+    if (rawTin > 0){
+        money += rawTin
+        rawTin = 0
+        document.getElementById("rawTinOwned").innerText = rawTin
+        document.getElementById("moneyOwned").innerText = money
+        document.getElementById("rawTinSellAmount").innerText = 0
+        document.getElementById("moneyGainedFromRawTin").innerText = 0
     }
 }
