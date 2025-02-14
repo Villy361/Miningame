@@ -88,7 +88,7 @@ function UpgradeRawTinGained(){
 
 function MoneyClicked(){
     if (rawTin > 0){
-        money += rawTin
+        money += rawTin * moneyGainMult * moneyPerRawTin
         rawTin = 0
         document.getElementById("rawTinOwned").innerText = rawTin
         document.getElementById("moneyOwned").innerText = money
