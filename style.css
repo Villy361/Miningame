@@ -26,29 +26,34 @@ body{
 #rawTinButton{
     background-color: black;
     font-family: monospace;
-    color: #c7e0f6;
+    color: paleturquoise;
 }
 #rawTinUpgrade1{
     background-color: black;
     font-family: monospace;
-    color: #c7e0f6;
+    color: paleturquoise;
 }
 #rawTinAmountText{
     font-family: monospace;
     width: max-content;
-    background-color: #c7e0f6;
+    background-color: paleturquoise;
     border: 2px solid black;
     color: black;
 }
 #moneyAmountText{
     font-family: monospace;
     width: max-content;
-    background-color: #0eee0a;
+    background-color: lime;
     border: 2px solid black;
     color: black;
 }
-#moneyButton{
+#moneyButtonCopper{
     background-color: black;
     font-family: monospace;
-    color: #0eee0a;
+    color: lime;
+}
+#moneyButtonTin{
+    background-color: black;
+    font-family: monospace;
+    color: lime;
 }
