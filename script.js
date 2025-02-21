@@ -47,6 +47,8 @@ function UpgradeRawCopperGained(){
         document.getElementById("rawCopperProduction").innerText = rawCopperProduction * rawCopperGained
         document.getElementById("rawCopperGainUpgradeCost").innerText = rawCopperGainedUpgradeCost
         document.getElementById("timesRawCopperGainUpgraded").innerText = timesRawCopperGainUpgraded
+        document.getElementById("rawCopperSellAmount").innerText = rawCopper
+        document.getElementById("moneyGainedFromRawCopper").innerText = rawCopper * moneyGainMult * moneyPerRawCopper
     }
 }
 
@@ -60,6 +62,8 @@ function UpgradeRawCopperProduction(){
         document.getElementById("rawCopperProduction").innerText = rawCopperProduction * rawCopperGained
         document.getElementById("rawCopperProductionUpgradeCost").innerText = rawCopperProductionUpgradeCost
         document.getElementById("RawCopperProductionUpgraded").innerText = "Yes"
+        document.getElementById("rawCopperSellAmount").innerText = rawCopper
+        document.getElementById("moneyGainedFromRawCopper").innerText = rawCopper * moneyGainMult * moneyPerRawCoppe
     }
 }
 
@@ -85,6 +89,8 @@ function UpgradeRawTinGained(){
         document.getElementById("rawTinGained").innerText = rawTinGained
         document.getElementById("rawTinGainUpgradeCost").innerText = rawTinGainedUpgradeCost
         document.getElementById("timesRawTinGainUpgraded").innerText = timesRawTinGainUpgraded
+        document.getElementById("rawTinSellAmount").innerText = rawTin
+        document.getElementById("moneyGainedFromRawTin").innerText = rawTin * moneyGainMult * moneyPerRawTin
     }
 }
 
