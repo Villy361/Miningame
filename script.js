@@ -5,7 +5,7 @@ rawCopperRemainingClicks = 5
 rawCopperGainedUpgradeCost = 2
 timesRawCopperGainUpgraded = 0
 rawCopperProduction = 0
-rawCopperProductionUpgradeCost = -1
+rawCopperProductionUpgradeCost = 2
 timesRawCopperProductionUpgraded = 0
 rawTin = 0
 rawTinGained = 1
@@ -40,7 +40,7 @@ function UpgradeRawCopperGained(){
     if (rawCopper >= rawCopperGainedUpgradeCost){
         rawCopper -= rawCopperGainedUpgradeCost
         rawCopperGained *= 2
-        rawCopperGainedUpgradeCost *= 2
+        rawCopperGainedUpgradeCost *= 4
         timesRawCopperGainUpgraded++
         document.getElementById("rawCopperOwned").innerText = rawCopper
         document.getElementById("rawCopperGained").innerText = rawCopperGained
@@ -53,18 +53,18 @@ function UpgradeRawCopperGained(){
 }
 
 function UpgradeRawCopperProduction(){
-    if (rawCopper >= rawCopperProductionUpgradeCost){
-        rawCopper -= rawCopperProductionUpgradeCost
-        rawCopperProduction = 2
-        rawCopperProductionUpgradeCost = -1
-        timesRawCopperProductionUpgraded++
-        document.getElementById("rawCopperOwned").innerText = rawCopper
-        document.getElementById("rawCopperProduction").innerText = rawCopperProduction * rawCopperGained
-        document.getElementById("rawCopperProductionUpgradeCost").innerText = rawCopperProductionUpgradeCost
-        document.getElementById("RawCopperProductionUpgraded").innerText = "Yes"
-        document.getElementById("rawCopperSellAmount").innerText = rawCopper
-        document.getElementById("moneyGainedFromRawCopper").innerText = rawCopper * moneyGainMult * moneyPerRawCoppe
-    }
+    //if (rawCopper >= rawCopperProductionUpgradeCost){
+    //    rawCopper -= rawCopperProductionUpgradeCost
+    //    rawCopperProduction = 2
+    //    rawCopperProductionUpgradeCost = -1
+    //    timesRawCopperProductionUpgraded++
+    //    document.getElementById("rawCopperOwned").innerText = rawCopper
+    //    document.getElementById("rawCopperProduction").innerText = rawCopperProduction * rawCopperGained
+    //    document.getElementById("rawCopperProductionUpgradeCost").innerText = rawCopperProductionUpgradeCost
+    //    document.getElementById("RawCopperProductionUpgraded").innerText = "Yes"
+    //    document.getElementById("rawCopperSellAmount").innerText = rawCopper
+    //    document.getElementById("moneyGainedFromRawCopper").innerText = rawCopper * moneyGainMult * moneyPerRawCoppe
+    //}
 }
 
 function RawTinClicked(){
