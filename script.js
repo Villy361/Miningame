@@ -82,8 +82,8 @@ function RawTinClicked(){
 function UpgradeRawTinGained(){
     if (rawTin >= rawTinGainedUpgradeCost){
         rawTin -= rawTinGainedUpgradeCost
-        rawTinGained += 1
-        rawTinGainedUpgradeCost += 5
+        rawTinGained *= 2
+        rawTinGainedUpgradeCost *= 5
         timesRawTinGainUpgraded += 1
         document.getElementById("rawTinOwned").innerText = rawTin
         document.getElementById("rawTinGained").innerText = rawTinGained
