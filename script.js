@@ -35,7 +35,6 @@ function UpgradeRawCopperGained(){
         timesRawCopperGainUpgraded++
         document.getElementById("rawCopperOwned").innerText = rawCopper
         document.getElementById("rawCopperGained").innerText = rawCopperGained
-        document.getElementById("rawCopperProduction").innerText = rawCopperProduction * rawCopperGained
         document.getElementById("rawCopperGainUpgradeCost").innerText = rawCopperGainedUpgradeCost
         document.getElementById("timesRawCopperGainUpgraded").innerText = timesRawCopperGainUpgraded
         document.getElementById("rawCopperSellAmount").innerText = rawCopper
