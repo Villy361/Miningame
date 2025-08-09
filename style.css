@@ -11,11 +11,6 @@ body{
     font-family: monospace;
     color: orange;
 }
-#rawCopperUpgrade2{
-    background-color: black;
-    font-family: monospace;
-    color: orange;
-}
 #rawCopperAmountText{
     font-family: monospace;
     width: max-content;
